@@ -3,11 +3,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>dockerProject</groupId>
-  <artifactId>dockerProject</artifactId>
+  <groupId>dockerWithGrid</groupId>
+  <artifactId>dockerWithGrid</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>dockerProject</name>
+  <name>dockerWithGrid</name>
   <!-- FIXME change it to the project's website -->
   <url>http://maven.apache.org</url>
 
@@ -16,6 +16,34 @@
     
   </properties>
 
+	<build>
+		 <!-- To define the plugin version in your parent POM -->
+   
+      <plugins>
+        
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+      	   	<source>11</source>
+      	   	<target>11</target>
+      </configuration>
+      </plugin>
+      
+       <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.5.1</version>
+          <configuration>
+          		<suiteXmlFiles>
+          			<suiteXmlFile>testng.xml</suiteXmlFile>
+          		</suiteXmlFiles>
+          </configuration>
+        </plugin>
+      
+      </plugins>
+   
+	</build>
     <dependencies>
      	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -23,7 +51,15 @@
 		    <artifactId>selenium-java</artifactId>
 		    <version>3.141.59</version>
 		</dependency>
-		
+	
+				<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+		    <groupId>org.testng</groupId>
+		    <artifactId>testng</artifactId>
+		    <version>7.10.2</version>
+		    <scope>test</scope>
+		</dependency>
+
 		
 
     </dependencies>

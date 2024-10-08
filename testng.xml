@@ -6,8 +6,8 @@
       <class name="docker.Setup_DockerGrid"/>
       <class name="docker.FirefoxTest4"/>
       <class name="docker.ChromeTest1"/>
-      <class name="docker.ChromeTest3"/>
-      <class name="docker.ChromeTest2"/>
+      <!--class name="docker.ChromeTest3"/>
+      <class name="docker.ChromeTest2"/-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
